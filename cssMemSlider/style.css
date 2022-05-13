@@ -66,23 +66,33 @@ body {
   column-gap: 5px;
 }
 
+.control-form {
+  padding: 10px;
+  cursor: pointer;
+}
+
 .control-elem {
   display: block;
-  padding: 5px;
-}
-
-.point {
-  width: 10px;
-  height: 10px;
-  background-color: #71abfe;
-  border: 5px solid rgb(0 0 0 / 0%);
+  width: 20px;
+  height: 20px;
   border-radius: 50%;
+  background-color: #71abfe;
+  border: 2px solid #71abfe;
+  cursor: pointer;
+  transition: 0.4s;
 }
 
-.control-elem:hover > .point {
+.control-form:hover > .control-elem,
+.control-elem:hover {
   background-color: #ffffff;
+  border-color: #ffffff;
 }
 
-.control-elem:active > .point:checked {
-  background-color: rgb(0 0 0 / 0%);
+.control-elem:active >  {
+  background-color: #bcbdbe;
+  border-color: #bcbdbe;
+}
+
+.control-elem:focus {
+  background-color: #25282a;
 }
