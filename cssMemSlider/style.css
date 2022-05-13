@@ -1,9 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
 * {
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 html {
   font-size: 10px;
+  font-family: 'Roboto', sans-serif;
 }
 
 body {
@@ -17,13 +21,18 @@ body {
 }
 
 .slider {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
   padding: 20px 40px;
   background-color: #25282a;
   border: 6px solid #161b22;
   border-radius: 10px;
+  row-gap: 20px;
 }
 
 .slides-wrapper {
+  width: 100%;
   overflow: hidden;
 }
 
@@ -33,13 +42,11 @@ body {
   display: flex;
   width: 100%;
   height: 400px;
-  scroll-behavior: smooth;
   transition: 1.1s;
 }
 
 .slide {
   min-width: 100%;
-  scroll-snap-align: center;
   border-radius: 10px;
 }
 
@@ -59,9 +66,23 @@ body {
   background-color: #ffff00;
 }
 
-.text {
+.text-wrapper {
+  display: flex;
+  flex-grow: 1;
+  align-items: center;
+  overflow: hidden;
+}
+
+.textes {
   position: relative;
-  bottom: -382px;
+  left: 0;
+  display: flex;
+  width: 100%;
+  transition: 1.1s;
+}
+
+.slide-text {
+  min-width: 100%;
   color: #ffffff;
 }
 
@@ -71,7 +92,6 @@ body {
 
 .controls {
   display: flex;
-  padding-top: 30px;
   column-gap: 5px;
 }
 
@@ -119,40 +139,17 @@ body {
   background-color: rgb(0 0 0 / 0%);
 }
 
-#meme2:checked ~ .slides-wrapper .slides {
+#meme2:checked ~ .slides-wrapper .slides,
+#meme2:checked ~ .text-wrapper .textes {
   left: -100%;
 }
 
-#meme3:checked ~ .slides-wrapper .slides {
+#meme3:checked ~ .slides-wrapper .slides,
+#meme3:checked ~ .text-wrapper .textes {
   left: -200%;
 }
 
-#meme4:checked ~ .slides-wrapper .slides {
+#meme4:checked ~ .slides-wrapper .slides,
+#meme4:checked ~ .text-wrapper .textes {
   left: -300%;
 }
-
-/* .control-form {
-  padding: 10px;
-  cursor: pointer;
-}
-
-.control-elem {
-  display: block;
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  background-color: #71abfe;
-  border: 2px solid #71abfe;
-  cursor: pointer;
-  transition: 0.4s;
-}
-
-.control-form:hover > .control-elem,
-.control-elem:hover {
-  background-color: #ffffff;
-  border-color: #ffffff;
-}
-
-.control-elem:focus {
-  background-color: #25282a;
-} */
