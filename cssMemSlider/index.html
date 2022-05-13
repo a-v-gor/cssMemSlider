@@ -16,6 +16,10 @@
   <main class="main">
     <div class="wrapper">
       <div class="slider">
+        <input type="radio" class="radio" name="radio-meme" id="meme1" checked>
+        <input type="radio" class="radio" name="radio-meme" id="meme2">
+        <input type="radio" class="radio" name="radio-meme" id="meme3">
+        <input type="radio" class="radio" name="radio-meme" id="meme4">
         <div class="slides">
           <div class="slide" id="slide-1"><p class="text">Text1</p></div>
           <div class="slide" id="slide-2"><p class="text">Text2</p></div>
@@ -23,22 +27,10 @@
           <div class="slide" id="slide-4"><p class="text">Text4</p></div>
         </div>
         <div class="controls">
-          <form class="control-form" action="#slide-1">
-            <input type="submit" class="control-elem" value="">
-          </form>
-          <form class="control-form" action="#slide-2">
-            <input type="submit" class="control-elem" value="">
-          </form>
-          <form class="control-form" action="#slide-3">
-            <input type="submit" class="control-elem" value="">
-          </form>
-          <form class="control-form" action="#slide-4">
-            <input type="submit" class="control-elem" value="">
-          </form>
-          <!-- <a href="#slide-1" class="control-elem"><button class="point"></button></a>
-          <a href="#slide-2" class="control-elem"><button class="point"></button></a>
-          <a href="#slide-3" class="control-elem"><button class="point"></button></a>
-          <a href="#slide-4" class="control-elem"><button class="point"></button></a> -->
+          <label for="meme1" class="label-radio" id="label-radio-1"><div class="point"></div></label>
+          <label for="meme2" class="label-radio" id="label-radio-2"><div class="point"></div></label>
+          <label for="meme3" class="label-radio" id="label-radio-3"><div class="point"></div></label>
+          <label for="meme4" class="label-radio" id="label-radio-4"><div class="point"></div></label>
         </div>
       </div>
     </div>
