@@ -24,7 +24,7 @@ h1 {
 
 .main {
   background-color: #6b6b6b;
-  padding: 1rem;
+  padding: 1rem 0;
   flex-grow: 1;
 }
 
@@ -36,7 +36,7 @@ h1 {
 
 .slider {
   width: 100%;
-  height: 80vh;
+  height: calc(100vh - 17rem);
   max-height: 60rem;
   display: flex;
   flex-wrap: wrap;
@@ -182,29 +182,17 @@ h1 {
   opacity: 1;
 }
 
-@media (max-width: 767px) {
-  .slider {
-    flex-flow: column nowrap;
-    align-items: center;
-  }
-
-  .text-wrapper {
-    width: 100%;
-    order: 1;
-    padding: 0.4rem;
-  }
-}
-
 .footer-container {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 2rem 0;
 }
 
 .footer-container > a {
   display: block;
-  width: 10rem;
-  height: 4rem;
+  width: 7.5rem;
+  height: 3rem;
   background-repeat: no-repeat;
   background-position: center;
   background-size: 100% auto;
@@ -226,7 +214,36 @@ h1 {
 }
 
 .year {
-  font-size: 3.6rem;
+  display: block;
+  font-size: 2rem;
   font-weight: bold;
   color: #ffffff;
+}
+
+@media (max-width: 767px) {
+  h1 {
+    color: #ffffff;
+    font-size: 1.8rem;
+  }
+
+  .slider {
+    flex-flow: column nowrap;
+    height: calc(100vh - 14.5rem);
+    align-items: center;
+  }
+
+  .text-wrapper {
+    width: 100%;
+    order: 1;
+    padding: 0.4rem;
+  }
+
+  .footer-container > a {
+    width: 5rem;
+    height: 2rem;
+  }
+
+  .year {
+    font-size: 1.8rem;
+  }
 }
