@@ -10,17 +10,22 @@ html {
 }
 
 body {
-  background-color: #464646;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #464646;  
 }
 
 h1 {
   color: #ffffff;
-  font-size: 2rem;
+  font-size: 2.4rem;
 }
 
 .main {
   background-color: #6b6b6b;
   padding: 1rem;
+  flex-grow: 1;
 }
 
 .wrapper {
@@ -40,13 +45,13 @@ h1 {
   background-color: #25282a;
   border: 0.6rem solid #161b22;
   border-radius: 1rem;
-  row-gap: 2rem;
+  row-gap: 1.5rem;
 }
 
 .slides-wrapper {
   overflow: hidden;
   width: 100%;
-  height: 85%;
+  height: 93%;
   border-radius: 1rem;
 }
 
@@ -66,8 +71,8 @@ h1 {
 }
 
 .slide > img {
-  height: 100%;
-  min-height: 5rem;
+  object-fit: contain;
+  max-width: 99%;
 }
 
 .text-wrapper {
@@ -105,8 +110,7 @@ h1 {
 
 .label-radio {
   width: 3.5rem;
-  height: 3.5rem;
-  padding: 1rem;
+  padding: 0.3rem 1rem;
   cursor: pointer;
 }
 
@@ -178,18 +182,51 @@ h1 {
   opacity: 1;
 }
 
-#slide-1 {
-  background-color: red;
+@media (max-width: 767px) {
+  .slider {
+    flex-flow: column nowrap;
+    align-items: center;
+  }
+
+  .text-wrapper {
+    width: 100%;
+    order: 1;
+    padding: 0.4rem;
+  }
 }
 
-#slide-2 {
-  background-color: blue;
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem 0;
 }
 
-#slide-3 {
-  background-color: yellow;
+.footer-container > a {
+  display: block;
+  width: 10rem;
+  height: 4rem;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% auto;
+  filter: invert(100%) sepia(100%) saturate(1%) hue-rotate(132deg) brightness(106%) contrast(101%);
+  opacity: 0.5;
+  transition: 0.4s;
 }
 
-#slide-4 {
-  background-color: green;
+.footer-container > a:hover {
+  opacity: 1;
+}
+
+.github {
+  background-image: url("../svg/GitHub_Logo.svg");
+}
+
+.rss {
+  background-image: url("../svg/rs_school_js.svg");
+}
+
+.year {
+  font-size: 3.6rem;
+  font-weight: bold;
+  color: #ffffff;
 }
